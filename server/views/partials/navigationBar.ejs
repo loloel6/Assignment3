@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/Assets/Tracker.png" alt="Calorie Tracker" width="80" height="80">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+        <% if (title == "Home") { %>
+          <a class="nav-link active" aria-current="page" href="/home">
+        <% } else { %>
+          <a class="nav-link" aria-current="page" href="/home">
+        <% } %>
+          <i class="fa-sharp fa-solid fa-house"></i> Home</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title == "Calories Counter") { %>
+          <a class="nav-link active" aria-current="page" href="/caloriesCounter"> 
+        <% } else { %>
+          <a class="nav-link" aria-current="page" href="/caloriesCounter">
+        <% } %>
+          <i class="fas fa-running"></i> Calories Counter</a>
+        </li>
+
+    </div>
+  </div>
+</nav>

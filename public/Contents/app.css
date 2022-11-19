@@ -1,0 +1,71 @@
+
+/*CSS3*/ 
+@charset "UTF-8"; 
+
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
+
+
+.jumbotron jumbotron-fluid
+{    
+    height: 100%;
+    width: 100%;  
+    margin-top: 0px;  
+    padding: 30px;  
+    background-color: rgb(3, 129, 129);
+}
+
+
+
+
+ul {
+    list-style-type: none;
+    margin:0px;
+    padding: 0px;
+}
+
+li {
+    float: center;
+}
+li a{
+    display: block;
+    padding: 40px;
+    margin-right: 350px;
+    text-size-adjust: 90px;
+    color: black;
+}
+
+.nav-item{
+    text-decoration-color: black;
+}
+    
+
+
+li a:hover{
+    background-color: orange;
+    transition: 1000ms;
+}
+
+main{
+    height: 800px;
+    text-align: center;
+    
+}
+
+footer{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+
+
+
+

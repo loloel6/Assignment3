@@ -1,0 +1,55 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navigationBar.ejs') %>
+
+<main> 
+
+<div class= "dataBaseTable">
+    <h3><%= title %></h3>
+    <a href= "/caloriesCounter/add" class="btn btn-primary" role="button">
+        <i class="fas fa-plus-circle"></i> Add food
+    </a>
+    <br>
+    <br>
+    <table class="table table-hover table-white">
+        <thead>
+            <tr>
+            <th scope="col">Name Of Food</th>
+            <th scope="col">Quantity in grams</th>
+            <th scope="col">Calories</th>
+            <th scope="col">Type of nutrient</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        <% for(let count=0; count<caloriesList.length; count++) { %>
+            <tr>
+            <td class="col"><%=caloriesList[count].nameOfFood %></td>
+            <td class="col"><%=caloriesList[count].qtyInGrams %></td>
+            <td class="col"><%=caloriesList[count].calories %></td>
+            <td class="col"><%=caloriesList[count].typeOfNutriet %></td>
+
+            <td class="col">
+                <a href="/caloriesCounter/edit/<%=caloriesList[count]._id %>"
+                    class= "btn btn-success"> 
+                    <i class="fas fa-pencil-alt"></i> Edit </a>
+            </td>
+            <td class="col">
+                <a href="/caloriesCounter/delete/<%=caloriesList[count]._id %>"
+                    class= "btn btn-danger">
+                    <i class="fa-solid fa-delete-left"></i> Delete </a>
+            </td>
+            </tr>
+        <% }%>
+    </table>
+</div>
+
+</main>
+
+<%- include('../partials/footer.ejs') %>
+
+<style> 
+main{
+    background-color: rgb(255,255,153);
+}
+</style>
+

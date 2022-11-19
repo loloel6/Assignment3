@@ -1,0 +1,64 @@
+<%- include('../partials/header.ejs') %>
+
+<%- include('../partials/navigationBar.ejs') %>
+
+<div class="container">
+    <div class ="row"> 
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%=title %></h1>
+            <form class = "form" method = "post"> 
+                <div class="form-group">
+                    <label for = "nameTextField"><b>Name of Food</b></label>
+                    <input type = "text" class= "form-control"
+                    id="nameTextField"
+                    placeholder = "Enter the name of the food"
+                    name ="nameOfFood"
+                    value="<%= caloriesCounter.nameOfFood %>"
+                    required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "qtyInGramTextField"><b>Quantity in grams- Need help to convert? <a href="https://www.unitconverters.net/weight-and-mass-converter.html" target="_blank">Click here </a></b> </label>
+                    <input type = "number" class= "form-control"
+                    id="qtyInGramTextField"
+                    placeholder = "Enter the quantity in grams"
+                    name ="qtyInGrams" 
+                    value="<%= caloriesCounter.qtyInGrams %>"
+                    required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "caloriesTextField"><b>Calories</b></label>
+                    <input type = "number" class= "form-control"
+                    id="caloriesTextField"
+                    placeholder = "Enter the amount of calories"
+                    name ="calories" 
+                    value="<%= caloriesCounter.calories %>"
+                    required>
+                </div> 
+
+                <div class="form-group">
+                    <label for = "typeOfNutrientTextField"><b>Nutrient</b></label>
+                    <input type = "text" class= "form-control"
+                    id="typeOfNutrientTextField"
+                    placeholder = "Enter what type of nutrient it is"
+                    name ="typeOfNutriet" 
+                    value="<%= caloriesCounter.typeOfNutriet %>"
+                    required>
+                    
+                </div> 
+                <br>
+                <button class= "btn btn-success" type="submit"> 
+                    <i class="fa-solid fa-floppy-disk"></i> Save
+                </button>
+
+                <a href = "/caloriesCounter" class="btn btn-danger">
+                    <i class="fa-solid fa-xmark"></i> Cancel </a>
+            </form>
+        </div>
+    </div> 
+</div>
+
+
+
+
